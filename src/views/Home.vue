@@ -1,18 +1,32 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  div
+    Earthquakes.px-8(@updateEarthquake="setData")
+    RegionalData(:earthquake="earthquake")
+    Map(:earthquake="earthquake")
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  import Earthquakes from '@/components/Earthquakes'
+  import RegionalData from '@/components/RegionalData'
+  import Map from '@/components/Map.vue'
+
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Earthquakes,
+    RegionalData,
+    Map
+  },
+  data() {
+    return {
+      earthquake: {}
+    }
+  },
+  methods: {
+    setData(value) {
+      this.earthquake = value
+    }
   }
 }
 </script>
