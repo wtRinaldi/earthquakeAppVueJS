@@ -1,16 +1,22 @@
 <template lang="pug">
   #app
     #nav.flex.justify-between
+      div.flex(@click="toggleListClicked")
+        font-awesome-icon(icon="bars")
       div.flex
         router-link(to="/") Home |
-        router-link(to="/about") About
-      div.flex
-        font-awesome-icon(icon="['fas', 'fa-bars']")
+        router-link(to="/about")  About
     router-view
 </template>
 
 <script>
-
+  export default {
+    methods: {
+      toggleListClicked() {
+        this.$store.commit('toggleListDisplay')
+      }
+    }
+}
 </script>
 
 <style lang="sass">
@@ -21,6 +27,7 @@
   color: #2c3e50
 
 #nav
+
   padding: .75rem
   a
     font-weight: bold

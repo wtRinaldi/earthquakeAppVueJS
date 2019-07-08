@@ -1,13 +1,13 @@
 <template lang="pug">
-    div.relative
+    div#list.absolute.max-w-lg(:class="{ hidden: this.$store.getters.listState }")
       div.bg-white
         table
           thead.bg-blue-500
             th.text-white Magnitude
             th.text-white Location
           tr(v-for="earthquake in earthquakes" @click="$emit('updateEarthquake', earthquake)" class="hover:bg-gray-200")
-            td {{ earthquake.magnitude }}
-            td.whitespace-no-wrap {{ earthquake.location }}
+            td.p-2 {{ earthquake.magnitude }}
+            td.p-2.whitespace-no-wrap {{ earthquake.location }}
 </template>
 
 <script>
@@ -15,10 +15,6 @@ import axios from 'axios'
 
 export default {
   name: 'Earthquakes',
-  props: {
-    isListShown: Boolean,
-    default: true
-  },
   data() {
     return {
       earthquakes: []
@@ -55,4 +51,7 @@ export default {
 <style scoped lang="sass">
   #list
     z-index: 1000
+
+  .hidden
+    display: none
 </style>

@@ -1,7 +1,7 @@
 <template lang="pug">
   div
-    Earthquakes.px-8(@updateEarthquake="setData")
-    RegionalData(:earthquake="earthquake")
+    Earthquakes.pl-16(@updateEarthquake="setData")
+    RegionalData.hidden(:earthquake="earthquake")
     Map(:earthquake="earthquake")
 </template>
 
@@ -9,7 +9,6 @@
   import Earthquakes from '@/components/Earthquakes'
   import RegionalData from '@/components/RegionalData'
   import Map from '@/components/Map.vue'
-
 
 export default {
   name: 'home',
