@@ -2,7 +2,7 @@
 
 # USGS Earthquake Application
 
-see the source files at https://github.com/wtRinaldi/My-Neighborhood-Map/tree/master
+see the source files at https://github.com/wtRinaldi/earthquakeAppVueJS
 
 ## Description
 
