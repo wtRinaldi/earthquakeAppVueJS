@@ -4,8 +4,8 @@
       div.flex(@click="toggleListClicked")
         font-awesome-icon(icon="bars")
       div.flex
-        router-link(to="/") Home |
-        router-link(to="/about")  About
+        router-link(to="/").pr-1 Home
+        router-link(to="/about") | About
     router-view
 </template>
 
@@ -27,7 +27,6 @@
   color: #2c3e50
 
 #nav
-
   padding: .75rem
   a
     font-weight: bold
