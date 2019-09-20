@@ -21,10 +21,11 @@ The application can been found at:
 	- Vue.js
 	- Leaflet.js & Mapbox
 	- Tailwind.css
+	  Storybook.ui
 
 ## Design Pattern
 
-Component based front end and REST api architecture.
+Component based front end and REST api architecture.  Components are managed in Storybook.ui
 
 ## APIs
 
