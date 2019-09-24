@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/vue"
 
 
-storiesOf('test', module).add('TEST', () => ({
+storiesOf('Buttons', module).add('test button', () => ({
     data() {
         return {
             item: { id: 10, text: 'This is a test' }
